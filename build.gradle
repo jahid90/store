@@ -1,3 +1,3 @@
 tasks.register('run') {
-    dependsOn gradle.includedBuild('app').task(':app:run')
+    dependsOn gradle.includedBuild('app').task(':run')
 }
