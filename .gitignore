@@ -1,0 +1,9 @@
+build/
+.gradle/
+
+# Sub projects
+app/
+store-api/
+in-memory-binding/
+mysql-binding/
+mongo-binding/
