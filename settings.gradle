@@ -1,1 +1,3 @@
 rootProject.name = 'mongo-binding'
+
+includeBuild '../store-api'
