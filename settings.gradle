@@ -1,3 +1,5 @@
 rootProject.name = 'app'
 
 includeBuild '../store-api'
+includeBuild '../in-memory-binding'
+includeBuild '../mongo-binding'

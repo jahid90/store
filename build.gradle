@@ -10,6 +10,7 @@ dependencies {
     implementation ':store-api'
 
     runtimeOnly ':in-memory-binding'
+    // runtimeOnly ':mongo-binding'
 }
 
 application {
