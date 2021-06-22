@@ -1,9 +1,11 @@
 plugins {
     id 'java-library'
+    id 'maven-publish'
 }
 
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
