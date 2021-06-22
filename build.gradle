@@ -1,19 +1,32 @@
 plugins {
     id 'application'
+    id 'maven-publish'
 }
+
+sourceCompatibility = JavaVersion.VERSION_16
+targetCompatibility = JavaVersion.VERSION_16
 
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-    implementation ':store-api'
+    implementation 'com.github.jahid90:store-api:main-SNAPSHOT'
 
-    runtimeOnly ':in-memory-binding'
-    // runtimeOnly ':mongo-binding'
+    runtimeOnly 'com.github.jahid90:in-memory-binding:main-SNAPSHOT'
+    // comment above line and uncomment below line to change runtime dependency to mongo-binding
+    // runtimeOnly 'com.github.jahid90:mongo-binding:main-SNAPSHOT'
 }
 
 application {
     mainClass = 'io.jahiduls.store.app.App'
 }
 
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+}
