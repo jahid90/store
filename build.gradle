@@ -15,3 +15,10 @@ dependencies {
     implementation 'com.github.jahid90:store-api:main-SNAPSHOT'
 }
 
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+}
