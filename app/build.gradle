@@ -17,11 +17,11 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.jahid90.store:api:v1.0'
+    implementation 'com.github.jahid90.store:api:main-SNAPSHOT'
 
-    runtimeOnly 'com.github.jahid90.store:in-memory-binding:v1.0'
+    runtimeOnly 'com.github.jahid90.store:in-memory-binding:main-SNAPSHOT'
     // comment above line and uncomment below line to change runtime dependency to mongo-binding
-    // runtimeOnly 'com.github.jahid90.store:mongo-binding:v1.0'
+    // runtimeOnly 'com.github.jahid90.store:mongo-binding:main-SNAPSHOT'
 }
 
 application {

@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.jahid90.store:api:v1.0'
+    implementation 'com.github.jahid90.store:api:main-SNAPSHOT'
 }
 
 publishing {

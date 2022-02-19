@@ -1,5 +1,5 @@
 rootProject.name = 'store'
 include 'api'
-// include 'app'
-// include 'in-memory-binding'
-// include 'mongo-binding'
+include 'app'
+include 'in-memory-binding'
+include 'mongo-binding'
