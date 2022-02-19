@@ -1,10 +1,15 @@
 plugins {
     id 'application'
+    id 'java'
     id 'maven-publish'
 }
 
-sourceCompatibility = JavaVersion.VERSION_16
-targetCompatibility = JavaVersion.VERSION_16
+group = 'com.github.jahid90.store'
+description = 'app'
+version = '1.0'
+
+java.sourceCompatibility = JavaVersion.VERSION_11
+java.targetCompatibility = JavaVersion.VERSION_11
 
 repositories {
     mavenCentral()
@@ -12,11 +17,11 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.jahid90:store-api:main-SNAPSHOT'
+    implementation project(path: ':api')
 
-    runtimeOnly 'com.github.jahid90:in-memory-binding:main-SNAPSHOT'
+    runtimeOnly project(path: ':in-memory-binding')
     // comment above line and uncomment below line to change runtime dependency to mongo-binding
-    // runtimeOnly 'com.github.jahid90:mongo-binding:main-SNAPSHOT'
+    // runtimeOnly project(path: 'mongo-binding')
 }
 
 application {
