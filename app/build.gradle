@@ -17,7 +17,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.jahid90.store:api:main-SNAPSHOT'
+    implementation 'com.github.jahid90.store:api:1.0'
 
     runtimeOnly 'com.github.jahid90.store:in-memory-binding:main-SNAPSHOT'
     // comment above line and uncomment below line to change runtime dependency to mongo-binding
