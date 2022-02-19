@@ -8,8 +8,8 @@ group = 'com.github.jahid90.store'
 version = '1.0'
 description = 'app'
 
-java.sourceCompatibility = JavaVersion.VERSION_16
-java.targetCompatibility = JavaVersion.VERSION_16
+java.sourceCompatibility = JavaVersion.VERSION_11
+java.targetCompatibility = JavaVersion.VERSION_11
 
 repositories {
     mavenCentral()
@@ -17,11 +17,11 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.jahid90.store:api:1.0'
+    implementation 'com.github.jahid90.store:api:v1.0'
 
-    runtimeOnly 'com.github.jahid90.store:in-memory-binding:1.0'
+    runtimeOnly 'com.github.jahid90.store:in-memory-binding:v1.0'
     // comment above line and uncomment below line to change runtime dependency to mongo-binding
-    // runtimeOnly 'com.github.jahid90.store:mongo-binding:1.0'
+    // runtimeOnly 'com.github.jahid90.store:mongo-binding:v1.0'
 }
 
 application {
