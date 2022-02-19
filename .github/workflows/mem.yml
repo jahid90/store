@@ -1,0 +1,31 @@
+name: in-memory-binding
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - in-memory-binding/**
+  pull_request:
+    branches:
+      - main
+    paths:
+      - in-memory-binding/**
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 16
+        uses: actions/setup-java@v2
+        with:
+          java-version: "16"
+          distribution: "adopt"
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+        working-directory: in-memory-binding
+      - name: Build with Gradle
+        run: ./gradlew build
+        working-directory: in-memory-binding
