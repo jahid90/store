@@ -3,6 +3,13 @@ plugins {
     id 'maven-publish'
 }
 
+group = 'com.github.jahid90.store'
+version = '1.0'
+description = 'in-memory-binding'
+
+java.sourceCompatibility = JavaVersion.VERSION_16
+java.targetCompatibility = JavaVersion.VERSION_16
+
 repositories {
     mavenCentral()
     maven { url 'https://jitpack.io' }
@@ -12,12 +19,15 @@ dependencies {
     annotationProcessor 'com.google.auto.service:auto-service-annotations:1.0'
     compileOnly 'com.google.auto.service:auto-service:1.0'
 
-    implementation 'com.github.jahid90:store-api:main-SNAPSHOT'
+    implementation 'com.github.jahid90.store:api:1.0'
 }
 
 publishing {
     publications {
         maven(MavenPublication) {
+            groupId project.group
+            artifactId project.name
+            version project.version
             from components.java
         }
     }
